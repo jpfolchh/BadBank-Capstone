@@ -49,7 +49,7 @@ function TransferForm(props){
   const [balance, setBalance] = React.useState(0);
 
   const ctx = React.useContext(UserContext);
-  setEmail(ctx.user.email);
+  // setEmail(ctx.user.email);
   console.log(email);
   // const userEmail = ctx.user.email;  
 

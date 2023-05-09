@@ -73,7 +73,7 @@ function CreateForm(props){
   const [name, setName]         = React.useState('');
   const [email, setEmail]       = React.useState('');
   const [password, setPassword] = React.useState('');
-  const ctx = React.useContext(UserContext);
+  // const ctx = React.useContext(UserContext);
 
   function handle(){
     console.log(name,email,password);
@@ -151,9 +151,9 @@ function CreateForm(props){
       className="btn btn-light" 
       onClick={handle}>Create Account with Email</button>
 
-    <button type="submit" 
+    {/* <button type="submit" 
       className="btn btn-light" 
-      id="googlesignup"onClick={handleGoogle}>Sign-Up with your Google Account</button>
+      id="googlesignup"onClick={handleGoogle}>Sign-Up with your Google Account</button> */}
 
   </>);
 }

@@ -18,7 +18,7 @@ function AllData(){
 
 function TableForm (props){
     const [data, setData] = React.useState('');
-    const [table, setTable] = [''];
+    const [table, setTable] = React.useState([]);
     
     React.useEffect(() => {
     
@@ -36,9 +36,11 @@ function TableForm (props){
     }, []);
 
 
+
       const userTable = () => {
-        const newTable = table.map((user, i) => {
-        return (
+        const tableArray = [];
+        const newTable = data.map((user, i) => {
+        tableArray.push(
           <tr
             key={i}>
             <td>{user.name}</td>
@@ -48,7 +50,7 @@ function TableForm (props){
           </tr>
         );
         });
-        return newTable;
+        return tableArray;
       };
 
     // function createTable(data) {
@@ -81,7 +83,9 @@ function TableForm (props){
         </tr>
     </thead>
     {/* <tbody><tr><td colSpan='4'>{JSON.stringify(data)}</td></tr></tbody> */}
-    <tbody>{userTable}</tbody>
+    {data !== '' &&
+    <tbody>{userTable()}</tbody>
+    }
     </table>
     </>);
 }

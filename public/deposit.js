@@ -47,7 +47,7 @@ function DepositForm(props){
   const [amount, setAmount] = React.useState('');
 
   const ctx = React.useContext(UserContext);
-  setEmail(ctx.user.email);
+  // setEmail(ctx.user.email);
   console.log(email);
   // const userEmail = ctx.user.email;  
 

@@ -34,7 +34,7 @@ function BalanceForm(props){
   const [balance, setBalance] = React.useState(''); 
 
   const ctx = React.useContext(UserContext);
-  setEmail(ctx.user.email);
+  // setEmail(ctx.user.email);
   console.log(email);
   // const userEmail = ctx.user.email;   
 
@@ -46,9 +46,10 @@ function BalanceForm(props){
     .then(text => {
         try {
             const data = JSON.parse(text);
-            props.setStatus('Your current balance is:  $' + data.value.balance);
+            console.log(data);
+            props.setStatus('Your current balance is:  $' + data.balance);
             props.setShow(false);
-            setBalance(user.balance);
+            setBalance(data.balance);
             console.log('JSON:', data);
         } catch(err) {
             props.setStatus(text)

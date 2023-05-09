@@ -152,7 +152,7 @@ function LoginForm(props){
             document.getElementById('logoutLink').className = "nav-link";
             ctx.user.email = email;
         } catch(err) {
-            props.setStatus(text)
+            // props.setStatus(text)
             console.log('err:', text);
         }
     });
