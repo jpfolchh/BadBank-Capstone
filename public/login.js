@@ -150,10 +150,11 @@ function LoginForm(props){
             document.getElementById('navbarAll').className = "nav-link";
             document.getElementById('loginLink').className = "nav-link d-none";
             document.getElementById('logoutLink').className = "nav-link";
-            ctx.user.email = email;
+            // ctx.user.email = email;
         } catch(err) {
             // props.setStatus(text)
             console.log('err:', text);
+            props.setStatus('Error: ' + text);
         }
     });
     // end of login thru mongodb
